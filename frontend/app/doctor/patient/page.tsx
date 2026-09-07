@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   Activity,
@@ -141,7 +140,7 @@ function labelize(key: string) {
     .replace(/^./, (char) => char.toUpperCase());
 }
 
-export default function DoctorPatientPage() {
+function DoctorPatientPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -742,5 +741,22 @@ export default function DoctorPatientPage() {
         </footer>
       </div>
     </main>
+  );
+}
+
+export default function DoctorPatientPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-[#F6F8F7] flex items-center justify-center">
+          <div className="flex items-center gap-3 text-[#61716C]">
+            <div className="h-5 w-5 animate-spin rounded-full border-2 border-[#CBD8D4] border-t-[#365A91]" />
+            Loading patient record...
+          </div>
+        </main>
+      }
+    >
+      <DoctorPatientPageContent />
+    </Suspense>
   );
 }
