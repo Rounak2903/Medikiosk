@@ -10,7 +10,7 @@ export default function WelcomePage() {
           <Activity className="w-4.5 h-4.5 text-[#F6F7F5]" strokeWidth={2.5} />
         </div>
         <span className="font-[family-name:var(--font-heading)] font-semibold text-[#10201D] tracking-tight">
-          MEDIKIOSK
+          MEDINEXUS
         </span>
       </header>
 
@@ -18,7 +18,7 @@ export default function WelcomePage() {
       <section className="flex-1 flex flex-col items-center justify-center px-6 py-12 sm:py-16">
         <div className="max-w-2xl text-center fade-in-item" style={{ animationDelay: "80ms" }}>
           <h1 className="font-[family-name:var(--font-heading)] font-bold text-[#10201D] text-4xl sm:text-5xl tracking-tight">
-            MEDIKIOSK
+            MEDINEXUS
           </h1>
           <p className="mt-4 text-[#5C6B67] text-base sm:text-lg leading-relaxed max-w-lg mx-auto">
             AI-powered patient case-taking &amp; care platform
