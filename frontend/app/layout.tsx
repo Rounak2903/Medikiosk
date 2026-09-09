@@ -15,7 +15,7 @@ const plexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MEDINEXUS — AI-Powered Patient Case-Taking Platform",
+  title: "MEDIKIOSK — AI-Powered Patient Case-Taking Platform",
   description:
     "MEDINEXUS helps patients record symptoms and history, and helps doctors review AI-assisted case summaries.",
 };
